@@ -15,7 +15,7 @@
                 <configuration>
                     <!-- http://felix.apache.org/site/apache-felix-maven-bundle-plugin-bnd.html -->
                     <instructions>
-                        <Private-Package>com.amazonaws.utils</Private-Package>
+                        <Export-Package>!com.amazonaws.utils,com.amazonaws.*</Export-Package>
                     </instructions>
                 </configuration>
             </plugin>
