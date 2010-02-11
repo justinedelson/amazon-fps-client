@@ -6,7 +6,6 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <build>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.felix</groupId>
@@ -15,16 +14,27 @@
                 <extensions>true</extensions>
                 <configuration>
                     <!-- http://felix.apache.org/site/apache-felix-maven-bundle-plugin-bnd.html -->
+                    <instructions>
+                        <Private-Package>com.amazonaws.utils</Private-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
     <dependencies>
-    	<dependency>
-    		<groupId>commons-httpclient</groupId>
-    		<artifactId>commons-httpclient</artifactId>
-    		<version>3.0.1</version>
-    	</dependency>
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.0.1</version>
+        </dependency>
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
